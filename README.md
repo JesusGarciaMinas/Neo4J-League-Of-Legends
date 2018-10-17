@@ -43,3 +43,6 @@ RETURN x.Nombre, y.Nombre
 match (x:Personaje)-[:JUEGA_EN]->(p:Posicion)<-[:JUEGA_EN]-(y:Personaje)
 WHERE x.Region=y.Region AND x.Nombre<>y.Nombre AND x.Precio=450 AND x.Region='Freijord'
 RETURN x.Nombre, y.Nombre
+
+# JDBC
+Se incluye un proyecto de java donde se utiliza esta aplicación

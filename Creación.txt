@@ -1,0 +1,624 @@
+CREATE (TOP:Posicion {Nombre: 'TOP', Carril: 'Superior', hechizo: 'TP'})
+CREATE (JUNGLE:Posicion{Nombre: 'JUNGLE', hechizo: 'Smite'})
+CREATE (MID:Posicion{Nombre: 'MID', Carril: 'Medio', hechizo: 'Ignite'})
+CREATE (ADC:Posicion{Nombre: 'ADC', Carril: 'Inferior', hechizo: 'Heal'})
+CREATE (SUPPORT:Posicion {Nombre: 'SUPPORT', Carril: 'Inferior', hechizo: 'Exhaust'})
+
+CREATE (año2009: Fecha{Año: 2009, Temporada: 'Alpha'})
+CREATE (año2010: Fecha{Año: 2010, Temporada: 'Beta'})
+CREATE (año2011: Fecha{Año: 2011, Temporada: 1, Campeón: 'Fnatic'})
+CREATE (año2012: Fecha{Año: 2012, Temporada: 2, Campeón: 'TPA'})
+CREATE (año2013: Fecha{Año: 2013, Temporada: 3, Campeón: 'SKT'})
+CREATE (año2014: Fecha{Año: 2014, Temporada: 4, Campeón: 'Samsung White'})
+CREATE (año2015: Fecha{Año: 2015, Temporada: 5, Campeón: 'SKT'})
+CREATE (año2016: Fecha{Año: 2016, Temporada: 6, Campeón: 'SKT'})
+CREATE (año2017: Fecha{Año: 2017, Temporada: 7})
+
+CREATE (Aatrox: Personaje{Nombre: 'Aatrox', Ataque: 'Melee', Rol: 'Luchador', Precio: 6300})
+CREATE (Aatrox)-[:SALIO_EN{Mes: 'Junio'}]->(año2013)
+CREATE (Aatrox)-[:JUEGA_EN]->(TOP)
+CREATE (Aatrox)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Ahri: Personaje{Nombre: 'Ahri', Ataque: 'Range', Rol: 'Mago', Region: 'Jonia', Precio: 4800})
+CREATE (Ahri)-[:SALIO_EN{Mes: 'Diciembre'}]->(año2011)
+CREATE (Ahri)-[:JUEGA_EN]->(MID)
+
+CREATE (Akali: Personaje{Nombre: 'Akali', Ataque: 'Melee', Rol: 'Asesino', Region: 'Jonia', Precio: 3150})
+CREATE (Akali)-[:SALIO_EN{Mes: 'Mayo'}]->(año2010)
+CREATE (Akali)-[:JUEGA_EN]->(MID)
+CREATE (Akali)-[:JUEGA_EN]->(TOP)
+
+CREATE (Alistar: Personaje{Nombre: 'Alistar', Ataque: 'Melee', Rol: 'Apoyo', SkinEquipo: 'SKT', Precio: 1350})
+CREATE (Alistar)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (Alistar)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Amumu: Personaje{Nombre: 'Amumu', Ataque: 'Melee', Rol: 'Tanque', Region: 'Shurima', Precio: 450})
+CREATE (Amumu)-[:SALIO_EN{Mes: 'Junio'}]->(año2009)
+CREATE (Amumu)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Anivia: Personaje{Nombre: 'Anivia', Ataque: 'Range', Rol: 'Mago', Region: 'Freijord', Precio: 3150})
+CREATE (Anivia)-[:SALIO_EN{Mes: 'Julio'}]->(año2009)
+CREATE (Anivia)-[:JUEGA_EN]->(MID)
+
+CREATE (Annie: Personaje{Nombre: 'Annie', Ataque: 'Range', Rol: 'Mago', Precio: 450})
+CREATE (Annie)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (Annie)-[:SE_JUGABA_EN]->(MID)
+CREATE (Annie)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Ashe: Personaje{Nombre: 'Ashe', Ataque: 'Range', Rol: 'Tirador', Region: 'Freijord', Precio: 450})
+CREATE (Ashe)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (Ashe)-[:JUEGA_EN]->(ADC)
+
+CREATE (AurelionSol: Personaje{Nombre: 'Aurelion Sol', Ataque: 'Range', Rol: 'Mago', Precio: 6300})
+CREATE (AurelionSol)-[:SALIO_EN{Mes: 'Marzo'}]->(año2016)
+CREATE (AurelionSol)-[:JUEGA_EN]->(MID)
+
+CREATE (Azir: Personaje{Nombre: 'Azir', Ataque: 'Range', Rol: 'Mago', Region: 'Shurima', SkinEquipo: 'SKT', Precio: 6300})
+CREATE (Azir)-[:SALIO_EN{Mes: 'Septiembre'}]->(año2014)
+CREATE (Azir)-[:JUEGA_EN]->(MID)
+
+CREATE (Bardo: Personaje{Nombre: 'Bardo', Ataque: 'Range', Rol: 'Apoyo', Precio: 6300})
+CREATE (Bardo)-[:SALIO_EN{Mes: 'Marzo'}]->(año2015)
+CREATE (Bardo)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Blitzcrank: Personaje{Nombre: 'Blitzcrank', Ataque: 'Melee', Rol: 'Apoyo',  Region: 'Zaun', Precio: 3150})
+CREATE (Blitzcrank)-[:SALIO_EN{Mes: 'Septiembre'}]->(año2009)
+CREATE (Blitzcrank)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Brand: Personaje{Nombre: 'Brand', Ataque: 'Range', Rol: 'Mago', Precio: 4800})
+CREATE (Brand)-[:SALIO_EN{Mes: 'Abril'}]->(año2011)
+CREATE (Brand)-[:JUEGA_EN]->(MID)
+CREATE (Brand)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Braum: Personaje{Nombre: 'Braum', Ataque: 'Melee', Rol: 'Apoyo', Precio: 6300})
+CREATE (Braum)-[:SALIO_EN{Mes: 'Mayo'}]->(año2014)
+CREATE (Braum)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Caitlyn: Personaje{Nombre: 'Caitlyn', Ataque: 'Range', Rol: 'Tirador', Precio: 4800})
+CREATE (Caitlyn)-[:SALIO_EN{Mes: 'Enero'}]->(año2011)
+CREATE (Caitlyn)-[:JUEGA_EN]->(ADC)
+
+CREATE (Camille: Personaje{Nombre: 'Camille', Ataque: 'Melee', Rol: 'Asesino', Precio: 6300, Region: 'Piltover'})
+CREATE (Camille)-[:SALIO_EN{Mes: 'Diciembre'}]->(año2016)
+CREATE (Camille)-[:JUEGA_EN]->(TOP)
+
+CREATE (Cassiopea: Personaje{Nombre: 'Cassiopea', Ataque: 'Range', Rol: 'Mago', Precio: 4800, Region: 'Noxus'})
+CREATE (Cassiopea)-[:SALIO_EN{Mes: 'Diciembre'}]->(año2010)
+CREATE (Cassiopea)-[:JUEGA_EN]->(MID)
+
+CREATE (Chogath: Personaje{Nombre: 'Chogath', Ataque: 'Range', Rol: 'Tanque', Precio: 1350, Region: 'Vacio'})
+CREATE (Chogath)-[:SALIO_EN{Mes: 'Junio'}]->(año2009)
+CREATE (Chogath)-[:JUEGA_EN]->(TOP)
+
+CREATE (Corki: Personaje{Nombre: 'Corki', Ataque: 'Range', Rol: 'Tirador', Precio: 3150, Region: 'Bandle', SkinEquipo: 'Fnatic'})
+CREATE (Corki)-[:SALIO_EN{Mes: 'Septiembre'}]->(año2009)
+CREATE (Corki)-[:JUEGA_EN]->(MID)
+CREATE (Corki)-[:SE_JUGABA_EN]->(ADC)
+
+CREATE (Darius: Personaje{Nombre: 'Darius', Ataque: 'Melee', Rol: 'Tanque', Precio: 4800, Region: 'Noxus'})
+CREATE (Darius)-[:SALIO_EN{Mes: 'Mayo'}]->(año2012)
+CREATE (Darius)-[:JUEGA_EN]->(TOP)
+
+CREATE (Diana: Personaje{Nombre: 'Diana', Ataque: 'Melee', Rol: 'Mago', Precio: 4800, Region: 'Jonia'})
+CREATE (Diana)-[:SALIO_EN{Mes: 'Agosto'}]->(año2012)
+CREATE (Diana)-[:JUEGA_EN]->(MID)
+CREATE (Diana)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (DrMundo: Personaje{Nombre: 'Dr. Mundo', Ataque: 'Melee', Rol: 'Tanque', Precio: 1350, Region: 'Jonia', SkinEquipo: 'TPA'})
+CREATE (DrMundo)-[:SALIO_EN{Mes: 'Septiembre'}]->(año2009)
+CREATE (DrMundo)-[:JUEGA_EN]->(TOP)
+
+CREATE (Draven: Personaje{Nombre: 'Draven', Ataque: 'Range', Rol: 'Tirador', Precio: 4800, Region: 'Noxus'})
+CREATE (Draven)-[:SALIO_EN{Mes: 'Junio'}]->(año2012)
+CREATE (Draven)-[:JUEGA_EN]->(ADC)
+
+CREATE (Ekko: Personaje{Nombre: 'Ekko', Ataque: 'Melee', Rol: 'Mago', Precio: 6300, Region: 'Zaun', SkinEquipo: 'SKT'})
+CREATE (Ekko)-[:SALIO_EN{Mes: 'Mayo'}]->(año2015)
+CREATE (Ekko)-[:JUEGA_EN]->(MID)
+
+CREATE (Elise: Personaje{Nombre: 'Elise', Ataque: 'Melee', Rol: 'Mago', Precio: 6300, Region: 'Shadow Isles', SkinEquipo: 'SKT'})
+CREATE (Elise)-[:SALIO_EN{Mes: 'Octubre'}]->(año2012)
+CREATE (Elise)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Evelynn: Personaje{Nombre: 'Evelynn', Ataque: 'Melee', Rol: 'Mago', Precio: 1350, Region: 'Shadow Isles'})
+CREATE (Evelynn)-[:SALIO_EN{Mes: 'Mayo'}]->(año2009)
+CREATE (Evelynn)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Ezreal: Personaje{Nombre: 'Ezreal', Ataque: 'Range', Rol: 'Tirador', Precio: 4800, Region: 'Piltover', SkinEquipo: 'TPA'})
+CREATE (Ezreal)-[:SALIO_EN{Mes: 'Marzo'}]->(año2010)
+CREATE (Ezreal)-[:JUEGA_EN]->(ADC)
+CREATE (Ezreal)-[:JUEGA_EN]->(JUNGLE)
+CREATE (Ezreal)-[:SE_JUGABA_EN]->(MID)
+
+CREATE (Fiddlesticks: Personaje{Nombre: 'Fiddlesticks', Ataque: 'Range', Rol: 'Mago', Precio: 1350})
+CREATE (Fiddlesticks)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (Fiddlesticks)-[:JUEGA_EN]->(MID)
+CREATE (Fiddlesticks)-[:JUEGA_EN]->(JUNGLE)
+CREATE (Fiddlesticks)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Fiora: Personaje{Nombre: 'Fiora', Ataque: 'Melee', Rol: 'Luchador', Precio: 4800, Region: 'Demacia'})
+CREATE (Fiora)-[:SALIO_EN{Mes: 'Febrero'}]->(año2012)
+CREATE (Fiora)-[:JUEGA_EN]->(TOP)
+
+CREATE (Fizz: Personaje{Nombre: 'Fizz', Ataque: 'Melee', Rol: 'Mago', Precio: 4800, Region: 'Demacia'})
+CREATE (Fizz)-[:SALIO_EN{Mes: 'Noviembre'}]->(año2011)
+CREATE (Fizz)-[:JUEGA_EN]->(MID)
+CREATE (Fizz)-[:SE_JUGABA_EN]->(TOP)
+CREATE (Fizz)-[:SE_JUGABA_EN]->(SUPPORT)
+
+CREATE (Galio: Personaje{Nombre: 'Galio', Ataque: 'Melee', Rol: 'Tanque', Precio: 3150, Region: 'Demacia'})
+CREATE (Galio)-[:SALIO_EN{Mes: 'Agosto'}]->(año2010)
+CREATE (Galio)-[:JUEGA_EN]->(MID)
+CREATE (Galio)-[:JUEGA_EN]->(TOP)
+
+CREATE (Gangplank: Personaje{Nombre: 'Gangplank', Ataque: 'Melee', Rol: 'Luchador', Precio: 3150, Region: 'Bilgewater'})
+CREATE (Gangplank)-[:SALIO_EN{Mes: 'Agosto'}]->(año2009)
+CREATE (Gangplank)-[:JUEGA_EN]->(MID)
+CREATE (Gangplank)-[:JUEGA_EN]->(TOP)
+
+CREATE (Garen: Personaje{Nombre: 'Garen', Ataque: 'Melee', Rol: 'Tanque', Precio: 450, Region: 'Demacia'})
+CREATE (Garen)-[:SALIO_EN{Mes: 'Abril'}]->(año2010)
+CREATE (Garen)-[:JUEGA_EN]->(TOP)
+
+CREATE (Gnar: Personaje{Nombre: 'Gnar', Ataque: 'Range', Rol: 'Tanque', Precio: 6300})
+CREATE (Gnar)-[:SALIO_EN{Mes: 'Abril'}]->(año2014)
+CREATE (Gnar)-[:JUEGA_EN]->(TOP)
+
+CREATE (Gragas: Personaje{Nombre: 'Gragas', Ataque: 'Melee', Rol: 'Tanque', Precio: 3150, SkinEquipo: 'Fnatic'})
+CREATE (Gragas)-[:SALIO_EN{Mes: 'Febrero'}]->(año2010)
+CREATE (Gragas)-[:JUEGA_EN]->(JUNGLE)
+CREATE (Gragas)-[:SE_JUGABA_EN]->(MID)
+
+CREATE (Graves: Personaje{Nombre: 'Graves', Ataque: 'Range', Rol: 'Tirador', Precio: 4800})
+CREATE (Graves)-[:SALIO_EN{Mes: 'Octubre'}]->(año2011)
+CREATE (Graves)-[:JUEGA_EN]->(JUNGLE)
+CREATE (Graves)-[:SE_JUGABA_EN]->(ADC)
+
+CREATE (Hecarim: Personaje{Nombre: 'Hecarim', Ataque: 'Melee', Rol: 'Luchador', Precio: 4800, Region: 'Shadow Isles'})
+CREATE (Hecarim)-[:SALIO_EN{Mes: 'Abril'}]->(año2012)
+CREATE (Hecarim)-[:JUEGA_EN]->(JUNGLE)
+CREATE (Hecarim)-[:SE_JUGABA_EN]->(TOP)
+
+CREATE (Heimerdinger: Personaje{Nombre: 'Heimerdinger', Ataque: 'Range', Rol: 'Mago', Precio: 3150, Region: 'Piltover'})
+CREATE (Heimerdinger)-[:SALIO_EN{Mes: 'Octubre'}]->(año2009)
+CREATE (Heimerdinger)-[:JUEGA_EN]->(MID)
+
+CREATE (Illaoi: Personaje{Nombre: 'Illaoi', Ataque: 'Melee', Rol: 'Tanque', Precio: 6300, Region: 'Bilgewater'})
+CREATE (Illaoi)-[:SALIO_EN{Mes: 'Noviembre'}]->(año2015)
+CREATE (Illaoi)-[:JUEGA_EN]->(TOP)
+
+CREATE (Irelia: Personaje{Nombre: 'Irelia', Ataque: 'Melee', Rol: 'Luchador', Precio: 4800, Region: 'Jonia'})
+CREATE (Irelia)-[:SALIO_EN{Mes: 'Noviembre'}]->(año2010)
+CREATE (Irelia)-[:JUEGA_EN]->(TOP)
+
+CREATE (Ivern: Personaje{Nombre: 'Ivern', Ataque: 'Melee', Rol: 'Apoyo', Precio: 6300})
+CREATE (Ivern)-[:SALIO_EN{Mes: 'Octubre'}]->(año2016)
+CREATE (Ivern)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Janna: Personaje{Nombre: 'Janna', Ataque: 'Range', Rol: 'Apoyo', Precio: 1350, SkinEquipo: 'Fnatic', Region: 'Zaun'})
+CREATE (Janna)-[:SALIO_EN{Mes: 'Septiembre'}]->(año2009)
+CREATE (Janna)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (JarvanIV: Personaje{Nombre: 'Jarvan IV', Ataque: 'Melee', Rol: 'Tanque', Precio: 4800, SkinEquipo: 'Fnatic', Region: 'Demacia'})
+CREATE (JarvanIV)-[:SALIO_EN{Mes: 'Marzo'}]->(año2011)
+CREATE (JarvanIV)-[:JUEGA_EN]->(TOP)
+CREATE (JarvanIV)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Jax: Personaje{Nombre: 'Jax', Ataque: 'Melee', Rol: 'Luchador', Precio: 1350, SkinEquipo: 'SKT'})
+CREATE (Jax)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (Jax)-[:JUEGA_EN]->(TOP)
+CREATE (Jax)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Jayce: Personaje{Nombre: 'Jayce', Ataque: 'Range', Rol: 'Luchador', Precio: 4800, Region: 'Piltover'})
+CREATE (Jayce)-[:SALIO_EN{Mes: 'Julio'}]->(año2012)
+CREATE (Jayce)-[:JUEGA_EN]->(TOP)
+CREATE (Jayce)-[:JUEGA_EN]->(MID)
+
+CREATE (Jhin: Personaje{Nombre: 'Jhin', Ataque: 'Range', Rol: 'Tirador', Precio: 6300, Region: 'Jonia', SkinEquipo: 'SKT'})
+CREATE (Jhin)-[:SALIO_EN{Mes: 'Febrero'}]->(año2016)
+CREATE (Jhin)-[:JUEGA_EN]->(ADC)
+
+CREATE (Kalista: Personaje{Nombre: 'Kalista', Ataque: 'Range', Rol: 'Tirador', Precio: 6300, Region: 'Shadow Isles', SkinEquipo: 'SKT'})
+CREATE (Kalista)-[:SALIO_EN{Mes: 'Noviembre'}]->(año2014)
+CREATE (Kalista)-[:JUEGA_EN]->(ADC)
+
+CREATE (Karma: Personaje{Nombre: 'Karma', Ataque: 'Range', Rol: 'Mago', Precio: 3150, Region: 'Jonia'})
+CREATE (Karma)-[:SALIO_EN{Mes: 'Febrero'}]->(año2011)
+CREATE (Karma)-[:JUEGA_EN]->(MID)
+CREATE (Karma)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Karthus: Personaje{Nombre: 'Karthus', Ataque: 'Range', Rol: 'Mago', Precio: 3150, Region: 'Shadow Isles', SkinEquipo: 'Fnatic'})
+CREATE (Karthus)-[:SALIO_EN{Mes: 'Junio'}]->(año2009)
+CREATE (Karthus)-[:JUEGA_EN]->(MID)
+
+CREATE (Kassadin: Personaje{Nombre: 'Kassadin', Ataque: 'Melee', Rol: 'Mago', Precio: 3150, Region: 'Vacio'})
+CREATE (Kassadin)-[:SALIO_EN{Mes: 'Agosto'}]->(año2009)
+CREATE (Kassadin)-[:JUEGA_EN]->(MID)
+
+CREATE (Katarina: Personaje{Nombre: 'Katarina', Ataque: 'Melee', Rol: 'Asesino', Precio: 3150, Region: 'Noxus'})
+CREATE (Katarina)-[:SALIO_EN{Mes: 'Septiembre'}]->(año2009)
+CREATE (Katarina)-[:JUEGA_EN]->(MID)
+
+CREATE (Kayle: Personaje{Nombre: 'Kayle', Ataque: 'Melee', Rol: 'Mago', Precio: 450, Region: 'Demacia'})
+CREATE (Kayle)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (Kayle)-[:JUEGA_EN]->(MID)
+CREATE (Kayle)-[:JUEGA_EN]->(TOP)
+
+CREATE (Kayn: Personaje{Nombre: 'Kayn', Ataque: 'Melee', Rol: 'Luchador', Precio: 6300, Region: 'Jonia'})
+CREATE (Kayn)-[:SALIO_EN{Mes: 'Julio'}]->(año2017)
+CREATE (Kayn)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Kennen: Personaje{Nombre: 'Kennen', Ataque: 'Range', Rol: 'Mago', Precio: 4800, Region: 'Jonia'})
+CREATE (Kennen)-[:SALIO_EN{Mes: 'Abril'}]->(año2010)
+CREATE (Kennen)-[:JUEGA_EN]->(TOP)
+CREATE (Kennen)-[:JUEGA_EN]->(MID)
+CREATE (Kennen)-[:SE_JUGABA_EN]->(ADC)
+
+CREATE (KhaZix: Personaje{Nombre: 'KhaZix', Ataque: 'Melee', Rol: 'Asesino', Precio: 4800, Region: 'Vacio'})
+CREATE (KhaZix)-[:SALIO_EN{Mes: 'Septiembre'}]->(año2012)
+CREATE (KhaZix)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Kindred: Personaje{Nombre: 'Kindred', Ataque: 'Range', Rol: 'Tirador', Precio: 6300})
+CREATE (Kindred)-[:SALIO_EN{Mes: 'Octubre'}]->(año2015)
+CREATE (Kindred)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Kled: Personaje{Nombre: 'Kled', Ataque: 'Melee', Rol: 'Luchador', Precio: 6300, Region: 'Noxus'})
+CREATE (Kled)-[:SALIO_EN{Mes: 'Agosto'}]->(año2016)
+CREATE (Kled)-[:JUEGA_EN]->(TOP)
+
+CREATE (KogMaw: Personaje{Nombre: 'KogMaw', Ataque: 'Range', Rol: 'Tirador', Precio: 4800, Region: 'Vacio'})
+CREATE (KogMaw)-[:SALIO_EN{Mes: 'Junio'}]->(año2010)
+CREATE (KogMaw)-[:JUEGA_EN]->(ADC)
+CREATE (KogMaw)-[:SE_JUGABA_EN]->(MID)
+
+CREATE (LeBlanc: Personaje{Nombre: 'LeBlanc', Ataque: 'Range', Rol: 'Mago', Precio: 3150, Region: 'Noxus'})
+CREATE (LeBlanc)-[:SALIO_EN{Mes: 'Noviembre'}]->(año2010)
+CREATE (LeBlanc)-[:JUEGA_EN]->(MID)
+
+CREATE (LeeSin: Personaje{Nombre: 'Lee Sin', Ataque: 'Melee', Rol: 'Luchador', Precio: 4800, Region: 'Jonia', SkinEquipo: 'SKT'})
+CREATE (LeeSin)-[:SALIO_EN{Mes: 'Abril'}]->(año2011)
+CREATE (LeeSin)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Leona: Personaje{Nombre: 'Leona', Ataque: 'Melee', Rol: 'Apoyo', Precio: 4800, Region: 'Targon'})
+CREATE (Leona)-[:SALIO_EN{Mes: 'Julio'}]->(año2011)
+CREATE (Leona)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Lissandra: Personaje{Nombre: 'Lissandra', Ataque: 'Range', Rol: 'Mago', Precio: 6300, Region: 'Freijord'})
+CREATE (Lissandra)-[:SALIO_EN{Mes: 'Abril'}]->(año2013)
+CREATE (Lissandra)-[:JUEGA_EN]->(MID)
+CREATE (Lissandra)-[:JUEGA_EN]->(TOP)
+
+CREATE (Lucian: Personaje{Nombre: 'Lucian', Ataque: 'Range', Rol: 'Tirador', Precio: 6300, Region: 'Demacia'})
+CREATE (Lucian)-[:SALIO_EN{Mes: 'Agosto'}]->(año2013)
+CREATE (Lucian)-[:JUEGA_EN]->(MID)
+CREATE (Lucian)-[:JUEGA_EN]->(ADC)
+
+CREATE (Lulu: Personaje{Nombre: 'Lulu', Ataque: 'Range', Rol: 'Apoyo', Precio: 4800, Region: 'Bandle'})
+CREATE (Lulu)-[:SALIO_EN{Mes: 'Marzo'}]->(año2012)
+CREATE (Lulu)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Lux: Personaje{Nombre: 'Lux', Ataque: 'Range', Rol: 'Mago', Precio: 3150, Region: 'Demacia'})
+CREATE (Lux)-[:SALIO_EN{Mes: 'Octubre'}]->(año2010)
+CREATE (Lux)-[:JUEGA_EN]->(MID)
+
+CREATE (Malphite: Personaje{Nombre: 'Malphite', Ataque: 'Melee', Rol: 'Tanque', Precio: 1350})
+CREATE (Malphite)-[:SALIO_EN{Mes: 'Septiembre'}]->(año2009)
+CREATE (Malphite)-[:JUEGA_EN]->(TOP)
+
+CREATE (Malzahar: Personaje{Nombre: 'Malzahar', Ataque: 'Range', Rol: 'Mago', Precio: 1350, Region: 'Vacio'})
+CREATE (Malzahar)-[:SALIO_EN{Mes: 'Junio'}]->(año2010)
+CREATE (Malzahar)-[:JUEGA_EN]->(SUPPORT)
+CREATE (Malzahar)-[:JUEGA_EN]->(MID)
+
+CREATE (Maokai: Personaje{Nombre: 'Maokai', Ataque: 'Melee', Rol: 'Tanque', Precio: 4800, Region: 'Shadow Isles'})
+CREATE (Maokai)-[:SALIO_EN{Mes: 'Febrero'}]->(año2011)
+CREATE (Maokai)-[:JUEGA_EN]->(TOP)
+
+CREATE (MaestroYi: Personaje{Nombre: 'Maestro Yi', Ataque: 'Melee', Rol: 'Luchador', Precio: 450, Region: 'Jonia'})
+CREATE (MaestroYi)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (MaestroYi)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (MissFortune: Personaje{Nombre: 'Miss Fortune', Ataque: 'Range', Rol: 'Tirador', Precio: 3150, Region: 'Bilgewater'})
+CREATE (MissFortune)-[:SALIO_EN{Mes: 'Septiembre'}]->(año2010)
+CREATE (MissFortune)-[:JUEGA_EN]->(ADC)
+CREATE (MissFortune)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Mordekaiser: Personaje{Nombre: 'Mordekaiser', Ataque: 'Melee', Rol: 'Luchador', Precio: 1350, Region: 'Shadow Isles'})
+CREATE (Mordekaiser)-[:SALIO_EN{Mes: 'Febrero'}]->(año2010)
+CREATE (Mordekaiser)-[:JUEGA_EN]->(ADC)
+CREATE (Mordekaiser)-[:JUEGA_EN]->(SUPPORT)
+CREATE (Mordekaiser)-[:JUEGA_EN]->(JUNGLE)
+CREATE (Mordekaiser)-[:JUEGA_EN]->(TOP)
+CREATE (Mordekaiser)-[:JUEGA_EN]->(MID)
+
+CREATE (Morgana: Personaje{Nombre: 'Morgana', Ataque: 'Range', Rol: 'Apoyo', Precio: 1350, Region: 'Noxus'})
+CREATE (Morgana)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (Morgana)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Nami: Personaje{Nombre: 'Nami', Ataque: 'Range', Rol: 'Apoyo', Precio: 6300, Region: 'Noxus', SkinEquipo: 'SKT'})
+CREATE (Nami)-[:SALIO_EN{Mes: 'Diciembre'}]->(año2012)
+CREATE (Nami)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Nasus: Personaje{Nombre: 'Nasus', Ataque: 'Melee', Rol: 'Luchador', Precio: 1350, Region: 'Shurima'})
+CREATE (Nasus)-[:SALIO_EN{Mes: 'Octubre'}]->(año2009)
+CREATE (Nasus)-[:JUEGA_EN]->(TOP)
+
+CREATE (Nautilus: Personaje{Nombre: 'Nautilus', Ataque: 'Melee', Rol: 'Tanque', Precio: 4800, Region: 'Bilgewater'})
+CREATE (Nautilus)-[:SALIO_EN{Mes: 'Febrero'}]->(año2012)
+CREATE (Nautilus)-[:JUEGA_EN]->(TOP)
+CREATE (Nautilus)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Nidalee: Personaje{Nombre: 'Nidalee', Ataque: 'Range', Rol: 'Luchador', Precio: 3150})
+CREATE (Nidalee)-[:SALIO_EN{Mes: 'Diciembre'}]->(año2009)
+CREATE (Nidalee)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Nocturne: Personaje{Nombre: 'Nocturne', Ataque: 'Melee', Rol: 'Luchador', Precio: 4800, Region: 'Shadow Isles'})
+CREATE (Nocturne)-[:SALIO_EN{Mes: 'Marzo'}]->(año2011)
+CREATE (Nocturne)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Nunu: Personaje{Nombre: 'Nunu', Ataque: 'Melee', Rol: 'Tanque', Precio: 450, SkinEquipo: 'TPA', Region: 'Freijord'})
+CREATE (Nunu)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (Nunu)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Olaf: Personaje{Nombre: 'Olaf', Ataque: 'Melee', Rol: 'Tanque', Precio: 3150, Region: 'Freijord', SkinEquipo: 'SKT'})
+CREATE (Olaf)-[:SALIO_EN{Mes: 'Junio'}]->(año2010)
+CREATE (Olaf)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Orianna: Personaje{Nombre: 'Orianna', Ataque: 'Range', Rol: 'Mago', Precio: 4800, Region: 'Piltover', SkinEquipo: 'TPA'})
+CREATE (Orianna)-[:SALIO_EN{Mes: 'Junio'}]->(año2011)
+CREATE (Orianna)-[:JUEGA_EN]->(MID)
+
+CREATE (Ornn: Personaje{Nombre: 'Ornn', Ataque: 'Melee', Rol: 'Tanque', Precio: 6300, Region: 'Freijord'})
+CREATE (Ornn)-[:SALIO_EN{Mes: 'Agosto'}]->(año2017)
+CREATE (Ornn)-[:JUEGA_EN]->(TOP)
+
+CREATE (Pantheon: Personaje{Nombre: 'Pantheon', Ataque: 'Melee', Rol: 'Luchador', Precio: 3150, Region: 'Targon'})
+CREATE (Pantheon)-[:SALIO_EN{Mes: 'Febrero'}]->(año2010)
+CREATE (Pantheon)-[:JUEGA_EN]->(TOP)
+
+CREATE (Poppy: Personaje{Nombre: 'Poppy', Ataque: 'Melee', Rol: 'Tanque', Precio: 450, Region: 'Demacia'})
+CREATE (Poppy)-[:SALIO_EN{Mes: 'Enero'}]->(año2010)
+CREATE (Poppy)-[:JUEGA_EN]->(TOP)
+
+CREATE (Quinn: Personaje{Nombre: 'Quinn', Ataque: 'Range', Rol: 'Tirador', Precio: 6300, Region: 'Demacia'})
+CREATE (Quinn)-[:SALIO_EN{Mes: 'Marzo'}]->(año2013)
+CREATE (Quinn)-[:JUEGA_EN]->(TOP)
+
+CREATE (Rakan: Personaje{Nombre: 'Rakan', Ataque: 'Melee', Rol: 'Apoyo', Precio: 6300, Region: 'Jonia'})
+CREATE (Rakan)-[:SALIO_EN{Mes: 'Abril'}]->(año2017)
+CREATE (Rakan)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Rammus: Personaje{Nombre: 'Rammus', Ataque: 'Melee', Rol: 'Tanque', Precio: 1350, Region: 'Shurima'})
+CREATE (Rammus)-[:SALIO_EN{Mes: 'Julio'}]->(año2009)
+CREATE (Rammus)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (RekSai: Personaje{Nombre: 'RekSai', Ataque: 'Melee', Rol: 'Tanque', Precio: 6300, Region: 'Vacio'})
+CREATE (RekSai)-[:SALIO_EN{Mes: 'Diciembre'}]->(año2014)
+CREATE (RekSai)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Renekton: Personaje{Nombre: 'Renekton', Ataque: 'Melee', Rol: 'Tanque', Precio: 4800, Region: 'Shurima', SkinEquipo: 'SKT'})
+CREATE (Renekton)-[:SALIO_EN{Mes: 'Enero'}]->(año2011)
+CREATE (Renekton)-[:JUEGA_EN]->(TOP)
+
+CREATE (Rengar: Personaje{Nombre: 'Rengar', Ataque: 'Melee', Rol: 'Asesino', Precio: 4800, SkinEquipo: 'Samsung White'})
+CREATE (Rengar)-[:SALIO_EN{Mes: 'Agosto'}]->(año2012)
+CREATE (Rengar)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Riven: Personaje{Nombre: 'Riven', Ataque: 'Melee', Rol: 'Luchador', Precio: 4800, Region: 'Noxus'})
+CREATE (Riven)-[:SALIO_EN{Mes: 'Septiembre'}]->(año2011)
+CREATE (Riven)-[:JUEGA_EN]->(TOP)
+
+CREATE (Rumble: Personaje{Nombre: 'Rumble', Ataque: 'Melee', Rol: 'Mago', Precio: 4800, Region: 'Bandle'})
+CREATE (Rumble)-[:SALIO_EN{Mes: 'Abril'}]->(año2011)
+CREATE (Rumble)-[:JUEGA_EN]->(TOP)
+
+CREATE (Ryze: Personaje{Nombre: 'Ryze', Ataque: 'Range', Rol: 'Mago', Precio: 450, SkinEquipo: 'SKT'})
+CREATE (Ryze)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (Ryze)-[:JUEGA_EN]->(MID)
+
+CREATE (Sejuani: Personaje{Nombre: 'Sejuani', Ataque: 'Melee', Rol: 'Tanque', Precio: 4800, Region: 'Freijord'})
+CREATE (Sejuani)-[:SALIO_EN{Mes: 'Enero'}]->(año2012)
+CREATE (Sejuani)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Shaco: Personaje{Nombre: 'Shaco', Ataque: 'Melee', Rol: 'Asesino', Precio: 3150})
+CREATE (Shaco)-[:SALIO_EN{Mes: 'Octubre'}]->(año2009)
+CREATE (Shaco)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Shen: Personaje{Nombre: 'Shen', Ataque: 'Melee', Rol: 'Tanque', Precio: 3150, SkinEquipo: 'TPA', Region: 'Jonia'})
+CREATE (Shen)-[:SALIO_EN{Mes: 'Marzo'}]->(año2010)
+CREATE (Shen)-[:JUEGA_EN]->(TOP)
+
+CREATE (Shyvana: Personaje{Nombre: 'Shyvana', Ataque: 'Melee', Rol: 'Tanque', Precio: 3150, Region: 'Demacia'})
+CREATE (Shyvana)-[:SALIO_EN{Mes: 'Noviembre'}]->(año2011)
+CREATE (Shyvana)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Singed: Personaje{Nombre: 'Singed', Ataque: 'Melee', Rol: 'Tanque', Precio: 450, Region: 'Zaun', SkinEquipo: 'Samsung White'})
+CREATE (Singed)-[:SALIO_EN{Mes: 'Abril'}]->(año2009)
+CREATE (Singed)-[:JUEGA_EN]->(TOP)
+
+CREATE (Sion: Personaje{Nombre: 'Sion', Ataque: 'Melee', Rol: 'Tanque', Precio: 1350, Region: 'Noxus'})
+CREATE (Sion)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (Sion)-[:JUEGA_EN]->(TOP)
+
+CREATE (Sivir: Personaje{Nombre: 'Sivir', Ataque: 'Range', Rol: 'Tirador', Precio: 450, Region: 'Shurima'})
+CREATE (Sivir)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (Sivir)-[:JUEGA_EN]->(ADC)
+
+CREATE (Skarner: Personaje{Nombre: 'Skarner', Ataque: 'Melee', Rol: 'Tanque', Precio: 4800, Region: 'Shurima'})
+CREATE (Skarner)-[:SALIO_EN{Mes: 'Agosto'}]->(año2011)
+CREATE (Skarner)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Sona: Personaje{Nombre: 'Sona', Ataque: 'Range', Rol: 'Apoyo', Precio: 3150, Region: 'Demacia'})
+CREATE (Sona)-[:SALIO_EN{Mes: 'Septiembre'}]->(año2010)
+CREATE (Sona)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Soraka: Personaje{Nombre: 'Soraka', Ataque: 'Range', Rol: 'Apoyo', Precio: 450, Region: 'Jonia'})
+CREATE (Soraka)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (Soraka)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Swain: Personaje{Nombre: 'Swain', Ataque: 'Range', Rol: 'Mago', Precio: 4800, Region: 'Noxus'})
+CREATE (Swain)-[:SALIO_EN{Mes: 'Octubre'}]->(año2010)
+CREATE (Swain)-[:JUEGA_EN]->(MID)
+CREATE (Swain)-[:JUEGA_EN]->(TOP)
+
+CREATE (Syndra: Personaje{Nombre: 'Syndra', Ataque: 'Range', Rol: 'Mago', Precio: 4800, Region: 'Jonia', SkinEquipo: 'SKT'})
+CREATE (Syndra)-[:SALIO_EN{Mes: 'Septiembre'}]->(año2012)
+CREATE (Syndra)-[:JUEGA_EN]->(MID)
+
+CREATE (TahmKench: Personaje{Nombre: 'Tahm Kench', Ataque: 'Melee', Rol: 'Apoyo', Precio: 6300})
+CREATE (TahmKench)-[:SALIO_EN{Mes: 'Julio'}]->(año2015)
+CREATE (TahmKench)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Taliyah: Personaje{Nombre: 'Taliyah', Ataque: 'Range', Rol: 'Mago', Precio: 6300, Region: 'Shurima'})
+CREATE (Taliyah)-[:SALIO_EN{Mes: 'Mayo'}]->(año2016)
+CREATE (Taliyah)-[:JUEGA_EN]->(MID)
+
+CREATE (Talon: Personaje{Nombre: 'Talon', Ataque: 'Melee', Rol: 'Asesino', Precio: 4800, Region: 'Noxus', SkinEquipo: 'Samsung White'})
+CREATE (Talon)-[:SALIO_EN{Mes: 'Agosto'}]->(año2011)
+CREATE (Talon)-[:JUEGA_EN]->(MID)
+
+CREATE (Taric: Personaje{Nombre: 'Taric', Ataque: 'Melee', Rol: 'Apoyo', Precio: 1350, Region: 'Noxus'})
+CREATE (Taric)-[:SALIO_EN{Mes: 'Agosto'}]->(año2009)
+CREATE (Taric)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Teemo: Personaje{Nombre: 'Teemo', Ataque: 'Range', Rol: 'Mago', Precio: 1350, Region: 'Bandle'})
+CREATE (Teemo)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (Teemo)-[:JUEGA_EN]->(TOP)
+
+CREATE (Thresh: Personaje{Nombre: 'Thresh', Ataque: 'Range', Rol: 'Apoyo', Precio: 6300, Region: 'Shadow Isles', SkinEquipo: 'Samsung White'})
+CREATE (Thresh)-[:SALIO_EN{Mes: 'Enero'}]->(año2013)
+CREATE (Thresh)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Tristana: Personaje{Nombre: 'Tristana', Ataque: 'Range', Rol: 'Tirador', Precio: 1350, Region: 'Bandle'})
+CREATE (Tristana)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (Tristana)-[:JUEGA_EN]->(ADC)
+
+CREATE (Trundle: Personaje{Nombre: 'Trundle', Ataque: 'Melee', Rol: 'Tanque', Precio: 4800, Region: 'Freijord'})
+CREATE (Trundle)-[:SALIO_EN{Mes: 'Diciembre'}]->(año2010)
+CREATE (Trundle)-[:JUEGA_EN]->(TOP)
+
+CREATE (Tryndamere: Personaje{Nombre: 'Tryndamere', Ataque: 'Melee', Rol: 'Luchador', Precio: 1350, Region: 'Freijord'})
+CREATE (Tryndamere)-[:SALIO_EN{Mes: 'Mayo'}]->(año2009)
+CREATE (Tryndamere)-[:JUEGA_EN]->(TOP)
+
+CREATE (TwistedFate: Personaje{Nombre: 'Twisted Fate', Ataque: 'Range', Rol: 'Mago', Precio: 1350, Region: 'Bilgewater'})
+CREATE (TwistedFate)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (TwistedFate)-[:JUEGA_EN]->(MID)
+
+CREATE (Twitch: Personaje{Nombre: 'Twitch', Ataque: 'Range', Rol: 'Tirador', Precio: 3150, Region: 'Zaun', SkinEquipo: 'Samsung White'})
+CREATE (Twitch)-[:SALIO_EN{Mes: 'Mayo'}]->(año2009)
+CREATE (Twitch)-[:JUEGA_EN]->(ADC)
+CREATE (Twitch)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Udyr: Personaje{Nombre: 'Udyr', Ataque: 'Melee', Rol: 'Tanque', Precio: 1350, Region: 'Freijord'})
+CREATE (Udyr)-[:SALIO_EN{Mes: 'Diciembre'}]->(año2009)
+CREATE (Udyr)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Urgot: Personaje{Nombre: 'Urgot', Ataque: 'Range', Rol: 'Tanque', Precio: 3150, Region: 'Noxus'})
+CREATE (Urgot)-[:SALIO_EN{Mes: 'Agosto'}]->(año2010)
+CREATE (Urgot)-[:JUEGA_EN]->(TOP)
+CREATE (Urgot)-[:SE_JUGABA_EN]->(ADC)
+
+CREATE (Varus: Personaje{Nombre: 'Varus', Ataque: 'Range', Rol: 'Tirador', Precio: 4800, Region: 'Jonia'})
+CREATE (Varus)-[:SALIO_EN{Mes: 'Mayo'}]->(año2012)
+CREATE (Varus)-[:JUEGA_EN]->(ADC)
+
+CREATE (Vayne: Personaje{Nombre: 'Vayne', Ataque: 'Range', Rol: 'Tirador', Precio: 4800, Region: 'Demacia', SkinEquipo: 'SKT'})
+CREATE (Vayne)-[:SALIO_EN{Mes: 'Mayo'}]->(año2011)
+CREATE (Vayne)-[:JUEGA_EN]->(ADC)
+
+CREATE (Veigar: Personaje{Nombre: 'Veigar', Ataque: 'Range', Rol: 'Mago', Precio: 1350, Region: 'Bandle'})
+CREATE (Veigar)-[:SALIO_EN{Mes: 'Julio'}]->(año2009)
+CREATE (Veigar)-[:JUEGA_EN]->(MID)
+
+CREATE (VelKoz: Personaje{Nombre: 'Vel Koz', Ataque: 'Range', Rol: 'Mago', Precio: 6300, Region: 'Vacio'})
+CREATE (VelKoz)-[:SALIO_EN{Mes: 'Febrero'}]->(año2014)
+CREATE (VelKoz)-[:JUEGA_EN]->(MID)
+CREATE (VelKoz)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Vi: Personaje{Nombre: 'Vi', Ataque: 'Melee', Rol: 'Luchador', Precio: 6300, Region: 'Piltover'})
+CREATE (Vi)-[:SALIO_EN{Mes: 'Diciembre'}]->(año2012)
+CREATE (Vi)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Viktor: Personaje{Nombre: 'Viktor', Ataque: 'Range', Rol: 'Mago', Precio: 4800, Region: 'Zaun'})
+CREATE (Viktor)-[:SALIO_EN{Mes: 'Diciembre'}]->(año2011)
+CREATE (Viktor)-[:JUEGA_EN]->(MID)
+
+CREATE (Vladimir: Personaje{Nombre: 'Vladimir', Ataque: 'Range', Rol: 'Mago', Precio: 4800, Region: 'Noxus'})
+CREATE (Vladimir)-[:SALIO_EN{Mes: 'Julio'}]->(año2010)
+CREATE (Vladimir)-[:JUEGA_EN]->(TOP)
+CREATE (Vladimir)-[:JUEGA_EN]->(MID)
+
+CREATE (Volibear: Personaje{Nombre: 'Volibear', Ataque: 'Melee', Rol: 'Tanque', Precio: 4800, Region: 'Freijord'})
+CREATE (Volibear)-[:SALIO_EN{Mes: 'Noviembre'}]->(año2011)
+CREATE (Volibear)-[:JUEGA_EN]->(TOP)
+CREATE (Volibear)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Warwick: Personaje{Nombre: 'Warwick', Ataque: 'Melee', Rol: 'Tanque', Precio: 450, Region: 'Zaun'})
+CREATE (Warwick)-[:SALIO_EN{Mes: 'Febrero'}]->(año2009)
+CREATE (Warwick)-[:JUEGA_EN]->(JUNGLE)
+CREATE (Warwick)-[:SE_JUGABA_EN]->(TOP)
+
+CREATE (Wukong: Personaje{Nombre: 'Wukong', Ataque: 'Melee', Rol: 'Luchador', Precio: 4800, Region: 'Jonia'})
+CREATE (Wukong)-[:SALIO_EN{Mes: 'Julio'}]->(año2011)
+CREATE (Wukong)-[:JUEGA_EN]->(JUNGLE)
+CREATE (Wukong)-[:JUEGA_EN]->(TOP)
+
+CREATE (Xayah: Personaje{Nombre: 'Xayah', Ataque: 'Range', Rol: 'Tirador', Precio: 6300, Region: 'Jonia'})
+CREATE (Xayah)-[:SALIO_EN{Mes: 'Abril'}]->(año2017)
+CREATE (Xayah)-[:JUEGA_EN]->(ADC)
+
+CREATE (Xerath: Personaje{Nombre: 'Xerath', Ataque: 'Range', Rol: 'Mago', Precio: 4800, Region: 'Shurima'})
+CREATE (Xerath)-[:SALIO_EN{Mes: 'Octubre'}]->(año2011)
+CREATE (Xerath)-[:JUEGA_EN]->(MID)
+
+CREATE (XinZhao: Personaje{Nombre: 'Xin Zhao', Ataque: 'Melee', Rol: 'Luchador', Precio: 1350, Region: 'Demacia'})
+CREATE (XinZhao)-[:SALIO_EN{Mes: 'Julio'}]->(año2010)
+CREATE (XinZhao)-[:JUEGA_EN]->(JUNGLE)
+
+CREATE (Yasuo: Personaje{Nombre: 'Yasuo', Ataque: 'Melee', Rol: 'Luchador', Precio: 6300, Region: 'Jonia'})
+CREATE (Yasuo)-[:SALIO_EN{Mes: 'Diciembre'}]->(año2013)
+CREATE (Yasuo)-[:JUEGA_EN]->(MID)
+CREATE (Yasuo)-[:JUEGA_EN]->(TOP)
+
+CREATE (Yorick: Personaje{Nombre: 'Yorick', Ataque: 'Melee', Rol: 'Tanque', Precio: 4800, Region: 'Shadow Isles'})
+CREATE (Yorick)-[:SALIO_EN{Mes: 'Junio'}]->(año2011)
+CREATE (Yorick)-[:JUEGA_EN]->(TOP)
+CREATE (Yorick)-[:SE_JUGABA_EN]->(JUNGLE)
+
+CREATE (Zac: Personaje{Nombre: 'Zac', Ataque: 'Melee', Rol: 'Tanque', Precio: 6300, Region: 'Zaun', SkinEquipo: 'SKT'})
+CREATE (Zac)-[:SALIO_EN{Mes: 'Marzo'}]->(año2013)
+CREATE (Zac)-[:JUEGA_EN]->(JUNGLE)
+CREATE (Zac)-[:SE_JUGABA_EN]->(TOP)
+
+CREATE (Zed: Personaje{Nombre: 'Zed', Ataque: 'Melee', Rol: 'Asesino', Precio: 6300, Region: 'Jonia', SkinEquipo: 'SKT'})
+CREATE (Zed)-[:SALIO_EN{Mes: 'Noviembre'}]->(año2012)
+CREATE (Zed)-[:JUEGA_EN]->(MID)
+
+CREATE (Ziggs: Personaje{Nombre: 'Ziggs', Ataque: 'Range', Rol: 'Mago', Precio: 4800, Region: 'Zaun'})
+CREATE (Ziggs)-[:SALIO_EN{Mes: 'Febrero'}]->(año2012)
+CREATE (Ziggs)-[:JUEGA_EN]->(MID)
+
+CREATE (Zilean: Personaje{Nombre: 'Zilean', Ataque: 'Range', Rol: 'Mago', Precio: 1350})
+CREATE (Zilean)-[:SALIO_EN{Mes: 'Abril'}]->(año2009)
+CREATE (Zilean)-[:JUGABA_EN]->(MID)
+CREATE (Zilean)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Zyra: Personaje{Nombre: 'Zyra', Ataque: 'Range', Rol: 'Apoyo', Precio: 4800, SkinEquipo: 'SKT'})
+CREATE (Zyra)-[:SALIO_EN{Mes: 'Julio'}]->(año2012)
+CREATE (Zyra)-[:JUGABA_EN]->(MID)
+CREATE (Zyra)-[:JUEGA_EN]->(SUPPORT)
+
+CREATE (Katarina)-[:ES_NOVIO_DE]->(Garen)
+CREATE (Garen)-[:ES_NOVIO_DE]->(Katarina)
+
+CREATE (Ezreal)-[:ES_NOVIO_DE]->(Lux)
+CREATE (Lux)-[:ES_NOVIO_DE]->(Ezreal)
+
+CREATE (Ashe)-[:ES_NOVIO_DE]->(Tryndamere)
+CREATE (Tryndamere)-[:ES_NOVIO_DE]->(Ashe)
+
+CREATE (Xayah)-[:ES_NOVIO_DE]->(Rakan)
+CREATE (Rakan)-[:ES_NOVIO_DE]->(Xayah)
+
+CREATE (Draven)-[:ES_NOVIO_DE]->(Draven)
